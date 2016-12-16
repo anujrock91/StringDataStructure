@@ -1,0 +1,17 @@
+package strStr;
+
+public class StrStr {
+	
+	public static 
+	
+	public static int strStr(String hayStick, String needle){
+		int occurance;
+		for(int i=0;i < (hayStick.length() - needle.length() + 1); i++){
+			if(hayStick.substring(i, needle.length()).equals(needle)){
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+}

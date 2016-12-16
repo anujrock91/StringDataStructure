@@ -1,0 +1,11 @@
+
+public class Read {
+	
+	private int pointer = 0;
+	
+	public static int read4(char [] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

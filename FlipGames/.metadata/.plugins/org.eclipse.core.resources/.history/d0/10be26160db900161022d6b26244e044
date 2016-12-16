@@ -1,0 +1,16 @@
+package Snippet;
+
+import java.util.*;
+
+public class FlipGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static List<String> getFlipPossibilities(String s){
+		int leftPointer=0;
+		int rightPointer=0;
+	}
+}

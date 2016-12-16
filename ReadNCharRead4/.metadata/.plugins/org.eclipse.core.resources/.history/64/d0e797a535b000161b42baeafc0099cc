@@ -1,0 +1,37 @@
+
+public class ReadN {
+	
+	public static int readN(char arr [], int n){
+		int totalRead = 0;
+		int inputIndex = 0;
+		if(n==0){
+			return 0;
+		}
+		else{
+			char [] temp = new char [4];
+			int readNum = Read.read4(temp);
+			totalRead = totalRead + readNum;
+			if(readNum < 4){
+				for(int i=0;i<temp.length;i++){
+					arr[inputIndex] = temp[i];
+					++inputIndex;
+				}
+			}
+			else{
+				if(totalRead < n){
+					for(int i=0;i<4;i++){
+						arr[inputIndex] = temp[i];
+						++inputIndex;
+					}
+				}
+				else if(totalRead == n){
+					for(int i=0;i<4;i++){
+						arr[inputIndex] = temp[i];
+						++inputIndex;
+					}
+					
+				}
+			}
+		}
+	}
+}

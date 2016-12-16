@@ -1,0 +1,8 @@
+
+public class CompareVersion {
+	
+	public static int getVersionResult(String s1, String s2){
+		String s1Split [] = s1.split(".");
+		
+	}
+}

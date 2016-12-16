@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class Permutations{
+	
+	public ArrayList<String> allPermutations(String s){
+		ArrayList<String> allPerms = new ArrayList<>();
+		if(s.length() == 0 || s.length() == 1){
+			allPerms.add(s);
+		}
+		else{
+			getAllPermutations(s, new ArrayList<>(), new ArrayList<>(), allPerms);
+		}
+		return allPerms;
+	}
+	
+	private void getAllPermutations(String s1, ArrayList<Character> left, ArrayList<Character> right, ArrayList<String> result){
+		if(left.size() == 1){
+			result.add(constructString(left, right));
+		}
+		else{
+			for(int i=0;i<s1.length();i++){
+				getAllPermutations(s1, left, right, result);
+			}
+		}
+	}
+	
+	private String constructString(ArrayList<Character> left, ArrayList<Character> right){
+		StringBuilder sb = new StringBuilder();
+		for(Character c: right){
+			String s = ""+c;
+			sb.append(s);
+		}
+		String last = ""+left.get(0);
+		return sb.append(last).toString();
+	}
+}

@@ -1,0 +1,21 @@
+package strStr;
+
+public class StrStr {
+	
+	public static void main(String args[]){
+		System.out.println(strStr("abcdefgh", "cde"));
+	}
+	
+	public static int strStr(String hayStick, String needle){
+		int occurance = -99;
+		for(int i=0;i < (hayStick.length() - needle.length() + 1); i++){
+			if(hayStick.substring(i, needle.length()).equals(needle)){
+				occurance = i;
+				break;
+			}
+		}
+		
+		return occurance==-99?-1:occurance;
+	}
+	
+}

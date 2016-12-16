@@ -1,0 +1,15 @@
+package Snippet;
+
+public class SubStringWithNoRepeat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	public String getLongestSubStringWithoutRepeat(String s){
+		String temp = new String(s);
+		
+	}
+}

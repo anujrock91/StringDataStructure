@@ -1,0 +1,13 @@
+import java.util.HashMap;
+
+public class RansomNote {
+	
+	public static boolean canConstruct(String ransomNote, String magzine){
+		HashMap<Character, Integer> bagofWords = new HashMap<>();
+		for(int i=0;i<magzine.length();i++){
+			char temp = (Character)magzine.charAt(i);
+			
+		}
+		return true;
+	}
+}

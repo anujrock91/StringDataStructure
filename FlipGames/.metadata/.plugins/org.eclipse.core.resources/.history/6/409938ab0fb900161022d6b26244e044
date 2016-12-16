@@ -1,0 +1,45 @@
+package Snippet;
+
+import java.util.*;
+
+public class FlipGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> result = getFlipPossibilities("+++--+-");
+		for(String s: result){
+			System.out.print(s + " | ");
+		}
+		System.out.println();
+	}
+	
+	public static List<String> getFlipPossibilities(String s){
+		ArrayList<String> result = new ArrayList<>();
+		int leftPointer=0;
+		int rightPointer=0;
+		if(s.length() == 0 || s.length()==1){
+			result.add(null);
+		}
+		else{
+			while(leftPointer < s.length() && rightPointer< s.length()){
+				if(s.charAt(rightPointer) != '+'){
+					++rightPointer;
+				}
+				else if(s.charAt(leftPointer) == '+' && s.charAt(rightPointer) == '+' && (leftPointer != rightPointer)){
+					String first = s.substring(0,leftPointer);
+					String second = s.substring(leftPointer+1, rightPointer);
+					String third = s.substring(rightPointer+1);
+					String finalString = first+'-'+second+'-'+third;
+					result.add(finalString);
+					leftPointer= rightPointer;
+					++rightPointer;
+				}
+				else{
+					leftPointer = rightPointer;
+					++rightPointer;
+				}
+			}
+		}
+		return result;
+	}
+}

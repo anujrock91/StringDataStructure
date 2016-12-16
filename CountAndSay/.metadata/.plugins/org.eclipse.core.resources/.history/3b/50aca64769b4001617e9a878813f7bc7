@@ -1,0 +1,32 @@
+package Snippet;
+
+import java.util.ArrayList;
+
+public class CountAndSay {
+
+	public static void main(String args[]){
+		countAndSay("21");
+	}
+	
+	public static String countAndSay(String num){
+		ArrayList<Character> resultList = new ArrayList<>();
+		char temp = num.charAt(num.length()-1);
+		int count = 0;
+		for(int i=(num.length()-1) ; i >= 0 ; i--){
+			if(num.charAt(i) == temp){
+				resultList.add(0,num.charAt(i));
+				++count;
+			}
+			else{
+				String tempCount = ""+count;
+				resultList.add(0, tempCount.charAt(0));
+				temp = num.charAt(i);
+				count = 1;
+				resultList.add(0, num.charAt(i));
+			}
+		}
+		String tempCount = ""+count;
+		resultList.add(0, tempCount.charAt(0));
+		return resultList.toString();
+	}
+}

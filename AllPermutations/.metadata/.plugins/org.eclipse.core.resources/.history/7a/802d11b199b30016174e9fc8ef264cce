@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class Permutations{
+	
+	public ArrayList<String> allPermutations(String s){
+		ArrayList<String> allPerms = new ArrayList<>();
+	}
+	
+	private void getAllPermutations(String s1, ArrayList<Character> left, ArrayList<Character> right){
+		
+	}
+}

@@ -1,0 +1,10 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char arr[]=new char[25];
+		ReadN.readN(arr, 25);
+	}
+
+}

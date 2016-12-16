@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+public class DecodeWays {
+	
+	private HashMap<Character, Integer> alphabetMap;
+	
+	public DecodeWays(){
+		alphabetMap = new HashMap<>();
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('B', 2);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+		alphabetMap.put('A', 1);alphabetMap.put('A', 1);
+	}
+}

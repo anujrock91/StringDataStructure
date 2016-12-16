@@ -1,0 +1,29 @@
+
+public class Calculator {
+	
+	public static int calculate(String s) {
+	    int md= -1; //0 is multiply 1 is divide
+	    int sign = 0;
+		
+		for(int i=0;i<s.length();i++){
+			int num=0;
+			char c= s.charAt(i);
+			if(Character.isDigit(c)){
+				num = c-'0';
+				++i;
+				while(i<s.length() && Character.isDigit(s.charAt(i))){
+					num = num*10 + (s.charAt(i)-'0'); 
+					++i;
+				}
+				--i;
+				
+				if(md == -1){
+					
+				}
+			}
+			else{
+				
+			}
+		}
+	}
+}

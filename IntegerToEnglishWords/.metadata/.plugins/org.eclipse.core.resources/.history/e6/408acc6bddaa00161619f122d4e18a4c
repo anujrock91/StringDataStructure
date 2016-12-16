@@ -1,0 +1,35 @@
+
+public class IntegerToWords {
+	private static String primitiveNums[] = {"", "one", "two","three", "four", "five" ,"six", "seven", "eight" , "nine", "ten" ,
+			"eleven", "twelve", "thirteen", "fourteen","fifteen", "sixteen" , "seventeen" ,"eighteen" ,"nineteen","twenty"};
+	private static String tens[]={"","","twenty", "thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+	private static String hundreds[]= {"hundered","thousand","million","billion"};
+	
+	public static String numberToWords(int num) {
+        int quo = 0;
+        int rem = 0;
+        String word = "";
+        quo=(num/1000);
+        rem=(num%1000);
+        while(rem!=0){
+        	word = construct(rem) + " " +word;
+        }
+		return word;
+    }	
+	
+	
+	private static String construct(int num){
+		int quo=(num/100);
+		int rem=(num%100);
+		String word = primitiveNums[quo] + " " + contructTens(rem);
+		return word;
+	}
+	
+	private static String contructTens(int num){
+		if(num < 21){
+			return primitiveNums[num];
+		}
+		return "";
+	}
+	
+}

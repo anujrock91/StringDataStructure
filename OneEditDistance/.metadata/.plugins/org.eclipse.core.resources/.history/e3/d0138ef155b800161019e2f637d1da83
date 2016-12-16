@@ -1,0 +1,24 @@
+package Snippet;
+
+import java.util.Scanner;
+
+public class OneEditDistance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter 1st String : ");
+		Scanner scanObj1 = new Scanner(System.in);
+		String s1 = scanObj1.nextLine();
+		System.out.println("Enter 2nd String : ");
+		Scanner scanObj2 = new Scanner(System.in);
+		String s2 = scanObj2.nextLine();
+		System.out.println(new OneEditDistance().isOneEdit(s1, s2));
+	}
+	
+	public boolean isOneEdit(String s1, String s2){
+		if((s1.length()-s2.length() >= 2) || (s1.length()-s2.length()<= -2)){
+			
+		}
+	}
+
+}

@@ -1,0 +1,34 @@
+import java.util.HashMap;
+
+public class LongestSubString2DistinctChars {
+	
+	public static String getLongestSubString(String s){
+		int left=0;
+		HashMap<Character, Integer> uniqueness = new HashMap<>();
+		for(int right=0;right<s.length();right++){
+			char c = s.charAt(right);
+			if(uniqueness.containsKey(c)){
+				int value = uniqueness.remove(c);
+				uniqueness.put(c, ++value);
+			}
+			else{
+				if(uniqueness.size() >= 2){
+					int value = uniqueness.get(s.charAt(left));
+					--value;
+					if(value == 0){
+						uniqueness.remove(s.charAt(left));
+					}
+					else{
+						uniqueness.remove(s.charAt(left));
+						uniqueness.put(s.charAt(left), value);
+					}
+					--left;
+				}
+				else{
+					int value = uniqueness.get(c);
+					++value;
+				}
+			}
+		}
+	}
+}

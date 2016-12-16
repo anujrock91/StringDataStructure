@@ -1,0 +1,8 @@
+package isPalindrome;
+
+public class PalindromeCheck {
+	
+	private static boolean isValidChar(char c){
+		
+	}
+}

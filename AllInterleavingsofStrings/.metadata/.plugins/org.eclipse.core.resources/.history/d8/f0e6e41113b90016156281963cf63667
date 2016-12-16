@@ -1,0 +1,54 @@
+package Snippet;
+import java.util.*;
+
+public class StringInterleavings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public List<String> getInterleavings(String s1, String s2){
+		ArrayList<Character> left = new ArrayList<>();
+		ArrayList<Character> right = new ArrayList<>();
+		ArrayList<Character> temp = new ArrayList<>();
+		ArrayList<String> result = new ArrayList<>();
+		for(int i=0;i<s1.length();i++){
+			left.add(s1.charAt(i));
+		}
+		for(int i=0;i<s2.length();i++){
+			right.add(s2.charAt(i));
+		}
+		interleave(left, right, temp, result);
+		return result;
+	}
+	
+	public void interleave(ArrayList<Character> leftList, ArrayList<Character> rightList, ArrayList<Character> tempList, ArrayList<String> resultList){
+		if(leftList.size() == 0 || rightList.size() == 0){
+			resultList.add(construct(leftList, rightList, tempList));
+			return;
+		}
+		else{
+			tempList.add(leftList.remove(0));
+		}
+	}
+	
+	private String construct(ArrayList<Character> left, ArrayList<Character> right, ArrayList<Character> temp){
+		StringBuilder sb = new StringBuilder();
+		if(left.size() == 0){
+			for(Character c: right){
+				sb.append(c);
+			}	
+		}
+		else if(right.size() == 0){
+			for(Character c: left){
+				sb.append(c);
+			}
+		}
+		for(Character c: temp){
+			sb.append(c);
+		}
+		return sb.toString();
+	}
+
+}

@@ -1,0 +1,13 @@
+{abc}{xyz}{}
+
+-{bc}{xyz}{a}
+--{c}{xyz}{ab}
+---{}{xyz}{abc} == abcxyz
+---{c}{yz}{abx}
+----{}{yz}{abxc} == abxcyz
+----{c}{z}{abxy}
+-----{}{z}{abxyc} == abxycz
+-----{c}{}{abxyz} == abxyzc
+--{bc}{yz}{ax}
+
+-{abc}{yz}{x}

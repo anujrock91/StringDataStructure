@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class GenerateParenthesisPermutations {
+	
+	public ArrayList<String> getParenthesisPermutations(int n){
+		ArrayList<Character> leftParen = new ArrayList<>();
+		ArrayList<Character> rightParen = new ArrayList<>();
+		for(int i=0;i<n;i++){
+			leftParen.add('(');
+			rightParen.add(')');
+		}
+		
+	}
+}

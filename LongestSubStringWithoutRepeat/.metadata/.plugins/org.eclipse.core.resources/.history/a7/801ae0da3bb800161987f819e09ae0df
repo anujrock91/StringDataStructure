@@ -1,0 +1,18 @@
+package Snippet;
+
+public class SubStringWithNoRepeat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String getLongestSubStringWithoutRepeat(String s){
+		String temp = new String(s);
+		int left = 0,right = 0;
+		HashMap<Character, Integer> storage = new HashMap<>();
+		while(left< temp.length() && right < temp.length()){
+			
+		}
+	}
+}

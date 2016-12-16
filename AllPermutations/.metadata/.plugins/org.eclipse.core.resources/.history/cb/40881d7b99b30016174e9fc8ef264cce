@@ -1,0 +1,7 @@
+
+public class Permutations{
+	
+	public ArrayList<String> allPermutations(String s){
+		
+	}
+}

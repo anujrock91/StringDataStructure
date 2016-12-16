@@ -1,0 +1,42 @@
+package Parser;
+
+import java.util.Stack;
+
+public class Parser {
+	
+	public NestedInteger specifyString(String s){
+		Stack tempStack = new Stack();
+		String temp = "";
+		for(int i=0;i<s.length();i++){
+			if(s.charAt(i) == '['){
+				tempStack.add(new NestedInteger());
+			}
+			else if(s.charAt(i) == ','){
+				if(!temp.equals("")){
+					NestedInteger obj = (NestedInteger)tempStack.peek();
+					obj.selfValue.add(Integer.parseInt(temp));
+				}
+				temp = "";
+			}
+			else if(s.charAt(i) == ']'){
+				if(!temp.equals("")){
+					NestedInteger obj = (NestedInteger)tempStack.peek();
+					obj.selfValue.add(Integer.parseInt(temp));
+				}
+				
+				NestedInteger obj = (NestedInteger)tempStack.pop();
+				if(!tempStack.isEmpty()){
+					NestedInteger parentObj = (NestedInteger)tempStack.peek();
+					parentObj.selfValue.get(parentObj.selfValue.size()-1);
+				}
+				else{
+					return obj;
+				}
+			}
+			else{
+				temp = temp + s.charAt(i);
+			}
+		}
+		 
+	}
+}

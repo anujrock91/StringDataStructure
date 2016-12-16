@@ -1,0 +1,9 @@
+package Parser;
+
+import java.util.ArrayList;
+
+public class NestedInteger {
+	public ArrayList<Integer> selfValue = new ArrayList<Integer>();
+	NestedInteger nestedObject;
+	
+}

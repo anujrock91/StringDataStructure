@@ -1,0 +1,14 @@
+
+abcd
+
+{abcd},{}
+-{bcd}{a}
+-{cd}{ab}
+--{d}{abc} == abcd
+--{c}{abd} == abdc
+-{bd}{ac}
+--{d}{acb} == acbd
+--{b}{acd} == acdb
+-{bc}{ad}
+--{c}{adb} == adbc
+--{b}{adc} == adcb

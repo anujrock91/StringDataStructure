@@ -1,0 +1,18 @@
+
+public class BinaryAdd {
+	
+	public static int addBinary(String num1, String num2){
+		int end1 = (num1.length()-1);
+		int end2 = (num2.length()-1);
+		int quo = 0;
+		int rem = 0;
+		StringBuilder sb = new StringBuilder();
+		while(end1>=0 && end2 >= 0){
+			int num1End = num1.charAt(end1)-'0';
+			int num2End = num2.charAt(end2)-'0';
+			quo = ((num1End+num2End)/2);
+			rem = ((num1End+num2End)%2);
+			String quo = quo;
+		}
+	}
+}

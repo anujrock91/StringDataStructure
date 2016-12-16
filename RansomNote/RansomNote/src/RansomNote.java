@@ -1,0 +1,37 @@
+import java.util.HashMap;
+
+public class RansomNote {
+	
+	public static boolean canConstruct(String ransomNote, String magzine){
+		HashMap<Character, Integer> bagofWords = new HashMap<>();
+		for(int i=0;i<magzine.length();i++){
+			char temp = (Character)magzine.charAt(i);
+			if(bagofWords.containsKey(temp)){
+				Integer value = bagofWords.get(temp);
+				++value;
+				bagofWords.put(temp, value);
+			}
+			else{
+				bagofWords.put(temp, 1);
+			}
+		}
+		
+		for(int i=0;i<ransomNote.length();i++){
+			char temp = ransomNote.charAt(i);
+			if(bagofWords.containsKey(temp)){
+				if(bagofWords.get(temp) < 1){
+					return false;
+				}
+				else{
+					Integer value = bagofWords.get(temp);
+					--value;
+					bagofWords.put(temp, value);
+				}
+			}
+			else{
+				return false;
+			}
+		}
+		return true;
+	}
+}

@@ -1,0 +1,20 @@
+package Snippet;
+
+import java.util.*;
+
+public class FlipGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static List<String> getFlipPossibilities(String s){
+		ArrayList<String> result = new ArrayList<>();
+		int leftPointer=0;
+		int rightPointer=0;
+		if(s.length() == 0 || s.length()==1){
+			
+		}
+	}
+}

@@ -1,0 +1,12 @@
+
+public class CompareVersion {
+	
+	public static int getVersionResult(String s1, String s2){
+		String s1Split [] = s1.split(".");
+		String s2Split[] = s2.split(".");
+		int index = 0;
+		while(index < s1Split.length && index<s2Split.length){
+			
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package strStr;
+
+public class StrStr {
+	
+	public static int strStr(String hayStick, String needle){
+		
+	}
+	
+}

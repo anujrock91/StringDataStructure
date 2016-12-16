@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+B:\FullTimeJob\Strings\LeetCode\BasicCalculator\.metadata\.plugins\org.eclipse.jdt.core

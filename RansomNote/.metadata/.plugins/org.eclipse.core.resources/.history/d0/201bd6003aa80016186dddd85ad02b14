@@ -1,0 +1,14 @@
+import java.util.HashMap;
+
+public class RansomNote {
+	
+	public static boolean canConstruct(String ransomNote, String magzine){
+		HashMap<String, Integer> bagofWords = new HashMap<>();
+		for(int i=0;i<magzine.length();i++){
+			if(bagofWords.containsKey(magzine.charAt(i))){
+				
+			}
+		}
+		return true;
+	}
+}

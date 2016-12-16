@@ -1,0 +1,17 @@
+package isPalindrome;
+
+public class PalindromeCheck {
+	
+	public static boolean isValidChar(char c){
+		if(c-'0' >= 0 && c-'0' <=9){
+			return true;
+		}
+		else if(c-'a' >=0 && c-'a' < 26){
+			return true;
+		}
+		else if(c-'A' >=0 && c-'A' < 26){
+			return true;
+		}
+		return false;
+	}
+}

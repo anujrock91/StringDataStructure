@@ -1,0 +1,28 @@
+
+public class LongestPrefixSuffixMatch {
+	
+	public int [] LPS(String s){
+		int lps [] = new int[s.length()];
+		int j = 0;
+		
+		for(int i=1;i<s.length();i++){
+			if(s.charAt(i) == s.charAt(j)){
+				lps[i] = (lps[i-1]+1);
+				++j;
+			}
+			else{
+				while(j>0){ //otherwise array out of range problem below
+					j = lps[j-1];
+					if(s.charAt(j) == s.charAt(i)){
+						lps[i] = lps[j]+1;
+						break;
+					}
+					else{
+						continue;
+					}
+				}
+			}
+		}	
+		return lps;
+	}
+}

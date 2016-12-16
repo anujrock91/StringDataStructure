@@ -1,0 +1,6 @@
+package Parser;
+
+public class NestedInteger {
+	ArrayList<Integer> selfValue = new ArrayList<Integer>();
+	
+}

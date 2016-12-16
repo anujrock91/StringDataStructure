@@ -1,0 +1,55 @@
+package Snippet;
+import java.util.*;
+import java.util.Map.Entry;
+
+public class GroupShiftedStrings {
+
+	public static void main(String[] args) {
+		System.out.println(getPattern("abc"));
+		System.out.println(getPattern("xyz"));
+		System.out.println(getPattern("yza"));
+		ArrayList<String> inputList = new ArrayList<>();
+		List<List<String>> result = new GroupShiftedStrings().getGroupShiftedStrings(inputList);
+	}
+	
+	public List<List<String>> getGroupShiftedStrings(ArrayList<String> inputList){
+		ArrayList<List<String>> result = new ArrayList<>();
+		HashMap<String, ArrayList<String>> patternMap = new HashMap<>();
+		for(String s: inputList){
+			String pattern = getPattern(s);
+			if(patternMap.containsKey(pattern)){
+				patternMap.get(pattern).add(s);
+			}
+			else{
+				ArrayList<String> newList = new ArrayList<>();
+				newList.add(s);
+				patternMap.put(pattern, newList);
+			}
+		}
+		for(Entry<String, ArrayList<String>> e : patternMap.entrySet()){
+			result.add(e.getValue());
+		}
+		return result;
+	}
+	
+	private static String getPattern(String s){
+		int pointer = 0;
+		StringBuilder sb = new StringBuilder();
+		if(s.length()==0){
+			return sb.append("_").toString();
+		}
+		else if(s.length() == 1){
+			return sb.append("#").toString();
+		}
+		while(pointer < (s.length()-1)){
+			int diff = s.charAt(pointer+1)-s.charAt(pointer);
+			if(diff < 0){
+				diff = (26+diff);
+			}
+			sb.append("#"+diff);
+			++pointer;
+		}
+		return sb.toString();
+	}
+
+}

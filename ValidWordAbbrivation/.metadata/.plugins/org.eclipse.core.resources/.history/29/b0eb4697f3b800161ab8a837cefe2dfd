@@ -1,0 +1,45 @@
+package Snippet;
+
+public class ValidWordAbbr {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(isValidAbbr("word", "2rd"));
+	}
+	
+	public static boolean isValidAbbr(String originalStr, String abbr){
+		int originalStrPointer = 0;
+		int abbrPointer = 0;
+		while(originalStrPointer < originalStr.length() && abbrPointer < abbr.length()){
+			if(!Character.isDigit(abbr.charAt(abbrPointer))){
+				if(abbr.charAt(abbrPointer) == originalStr.charAt(originalStrPointer)){
+					++abbrPointer;
+					++originalStrPointer;
+				}
+				else{
+					break;
+				}
+			}
+			else{
+				int number = 0;
+				while(abbrPointer < abbr.length() && Character.isDigit(abbr.charAt(abbrPointer))){
+					number = ((number*10)+Integer.parseInt(""+abbr.charAt(abbrPointer)));
+					++abbrPointer;
+				}
+				if(number+originalStrPointer > originalStr.length()){
+					break;
+				}
+				else{
+					originalStrPointer=(originalStrPointer+number);
+				}
+			}
+		}
+		if(originalStrPointer != originalStr.length() && abbrPointer != abbr.length()){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+
+}

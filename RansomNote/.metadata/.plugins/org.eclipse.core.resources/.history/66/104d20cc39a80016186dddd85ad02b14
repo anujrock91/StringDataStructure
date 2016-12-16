@@ -1,0 +1,10 @@
+import java.util.HashMap;
+
+public class RansomNote {
+	
+	public static boolean canConstruct(String ransomNote, String magzine){
+		HashMap<String, Integer> bagOfWords = new HashMap<>();
+		
+		return true;
+	}
+}

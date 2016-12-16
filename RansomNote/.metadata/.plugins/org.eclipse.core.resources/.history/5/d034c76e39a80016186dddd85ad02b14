@@ -1,0 +1,7 @@
+
+public class RansomNote {
+	
+	public static boolean canConstruct(){
+		
+	}
+}

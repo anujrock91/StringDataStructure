@@ -1,0 +1,14 @@
+
+public class LengthOfLastWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static int getLastWordLength(String s){
+		int end = (s.length()-1);
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+
+public class LongestPrefixSuffixMatch {
+	
+	public int [] LPS(String s){
+		
+	}
+}

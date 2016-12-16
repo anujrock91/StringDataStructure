@@ -1,0 +1,13 @@
+package Snippet;
+
+public class ValidParenthesis {
+	
+	public static boolean isValid(String s){
+		if(s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']'){
+			
+		}
+		else{
+			
+		}
+	}
+}
